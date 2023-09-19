@@ -7,7 +7,7 @@
     cannon : {
       color : "#57F2D6",
       bitSize : 4,
-      src   : "dot/cannon.dot",
+      src   : "dot/cannon.png",
       x : 0 , y : 0,
       moveX : 10
     },
@@ -19,7 +19,7 @@
     },
     bullet : {
       color : "white",
-      src   : "dot/Bullet.dot",
+      src   : "dot/Bullet.png",
       x : 0 , y : 0,
       moveX : 10
     },
@@ -37,8 +37,8 @@
     
     invader_src : {
       "crab" : [
-        'dot/enemy3.dot',
-        "dot/enemy4.dot"
+        'dot/enemy3.png',
+        "dot/enemy4.png"
       ],
       "octpus" : [
         "../images/dot/octpus_1.dot",
