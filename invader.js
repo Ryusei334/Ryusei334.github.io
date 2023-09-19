@@ -7,7 +7,7 @@
     cannon : {
       color : "#57F2D6",
       bitSize : 4,
-      src   : "../images/dot/cannon.dot",
+      src   : "dot/cannon.dot",
       x : 0 , y : 0,
       moveX : 10
     },
@@ -19,26 +19,26 @@
     },
     bullet : {
       color : "white",
-      src   : "../images/dot/bullet.dot",
+      src   : "dot/bullet.dot",
       x : 0 , y : 0,
       moveX : 10
     },
     invader_effect_1 : {
       color : "white",
-      src   : "../images/dot/invader_effect_1.dot",
+      src   : "dot/invader_effect_1.dot",
       x : 0 , y : 0,
     },
 
     tochika : {
       color : "red",
-      src   : "../images/dot/tochika.dot",
+      src   : "dot/tochika.dot",
       w     : 72
     },
     
     invader_src : {
       "crab" : [
-        '../images/dot/crab_1.dot',
-        "../images/dot/crab_2.dot"
+        'dot/enemy3.dot',
+        "dot/enemy4.dot"
       ],
       "octpus" : [
         "../images/dot/octpus_1.dot",
