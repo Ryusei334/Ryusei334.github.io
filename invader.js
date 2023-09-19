@@ -19,7 +19,7 @@
     },
     bullet : {
       color : "white",
-      src   : "dot/bullet.dot",
+      src   : "dot/Bullet.dot",
       x : 0 , y : 0,
       moveX : 10
     },
