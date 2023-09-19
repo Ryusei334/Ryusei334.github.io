@@ -24,12 +24,12 @@
   var __images = {
     "crab" : [
       {
-        src : "enemy3.png",
+        src : "dot/enemy3.png",
         x : 10, y : 64,
         w : 64, h : 64
       },
       {
-        src : "enemy4.png",
+        src : "dot/enemy4.png",
         x : 10, y : 64,
         w : 64, h : 64
       }
