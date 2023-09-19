@@ -24,37 +24,13 @@
   var __images = {
     "crab" : [
       {
-        src : "images/dot/crab_1.png",
+        src : "images/dot/enemy3.png",
         x : 10, y : 64,
         w : 64, h : 64
       },
       {
-        src : "images/dot/crab_2.png",
+        src : "images/dot/enemy4.png",
         x : 10, y : 64,
-        w : 64, h : 64
-      }
-    ],
-    "octpus" : [
-      {
-        src : "images/dot/octpus_1.png",
-        x : 80, y : 64,
-        w : 64, h : 64
-      },
-      {
-        src : "images/dot/octpus_2.png",
-        x : 80, y : 64,
-        w : 64, h : 64
-      }
-    ],
-    "squid" : [
-      {
-        src : "images/dot/squid_1.png",
-        x : 150, y : 64,
-        w : 64, h : 64
-      },
-      {
-        src : "images/dot/squid_2.png",
-        x : 150, y : 64,
         w : 64, h : 64
       }
     ]
