@@ -47,24 +47,26 @@
   }
 
   MAIN.prototype.image_cache = [];
-  MAIN.prototype.image = function(options){
-    if(!this.canvas_elm){return;}
-    if(!options){return;}
+	
+  MAIN.prototype.image = function(options) {
+    if (!this.canvas_elm) {
+        return;
+    }
+    if (!options) {
+        return;
+    }
     // 新規読み込み
-    if(typeof this.image_cache[options.src] === "undefined"){
-      this.image_cache[options.src] = new Image();
-      var img = this.image_cache[options.src];
-      img.src = options.src;
-      img.onload = (function(options){
-        this.image_draw(options , img);
-      }).bind(this , options);
+    if (typeof this.image_cache[options.src] === "undefined") {
+        var img = new Image(); // img変数を新しく定義
+        img.src = options.src;
+        img.onload = (function(options) {
+            this.image_cache[options.src] = img; // キャッシュに追加
+            this.image_draw(options, img);
+        }).bind(this, options);
+    } else {
+        this.image_draw(options, this.image_cache[options.src]); // キャッシュを利用
     }
-    // キャッシュ利用
-    else{
-      this.image_draw(options , img);
-    }
-    
-  };
+};
 
   MAIN.prototype.image_draw = function(options){
     if(typeof this.image_cache[options.src] === "undefined"){return}
@@ -72,21 +74,22 @@
     this.ctx.drawImage(img , options.x, options.y ,options.w , options.h);
   };
 
-  MAIN.prototype.animation_roop = function(time){
-    var func = (function(e){this.animation(e)}).bind(this);
+ MAIN.prototype.animation_roop = function(time) {
+    var func = (function(e) {
+        this.animation(e);
+    }).bind(this);
 
-    if(window.requestAnimationFrame
-    ||  window.webkitRequestAnimationFrame
-    ||  window.mozRequestAnimationFrame
-    ||  window.oRequestAnimationFrame
-    ||  window.msRequestAnimationFrame){
-      window.requestAnimationFrame(func);
+    if (window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame) {
+        window.requestAnimationFrame(func);
+    } else {
+        time = time || 10;
+        var anim_flg = setTimeout(func, time); // anim_flg変数を宣言
     }
-    else{
-      time = time || 10;
-      anim_flg = setTimeout(func , time);
-    }
-  };
+};
 
   MAIN.prototype.animation = function(){
     this.clear();
